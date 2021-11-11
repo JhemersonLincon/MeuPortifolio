@@ -145,16 +145,6 @@ function animeScroll(){
         else{element.classList.remove("animate")}
     })
 }
-window.addEventListener("scroll", gameScroll)
-function gameScroll(){
-  const game = document.querySelector("[data-game]")
-  const windowTop = window.scrollY;
-  if((windowTop) > game.offsetTop){
-    game.classList.add("animate")
-  }
-  else{game.classList.remove("animate")}
-}
-
 
 if(target.length){
     window.addEventListener("scroll", debounce(animeScroll, 150));

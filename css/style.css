@@ -169,6 +169,7 @@ body{
 section.sobre-min{
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
   position: relative;
 }
 .sobre-min  .background{
@@ -225,11 +226,12 @@ section.sobre-min{
 
 }
 .about{
-  width: 90%;
   margin-left: 146px;
   color: #fff;
 }
 .about p{
+
+  padding: var(--size-2x16);
   letter-spacing: 2px;
   font-size: var(--size-2x8); 
 }
@@ -591,6 +593,7 @@ section.sobre-min{
       height: calc(100vh - 140px);
       overflow-y: auto;
       z-index: 1000;
+      transition: .3s;
       visibility: visible;
     }
   .main .home{
@@ -609,6 +612,10 @@ section.sobre-min{
   }
   .github{
     display: none;
+  }
+  .about{
+    margin-left: 0px;
+    padding: var(--size-2x16);
   }
   .footer{
     grid-template-areas: 
