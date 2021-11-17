@@ -451,11 +451,18 @@ section.sobre-min{
 .projetos_content a:hover{
   background-color:#6000aac7;
 }
-
+.image_projeto{
+  cursor: pointer;
+  overflow: hidden;
+}
 .image_projeto img{
   border-radius:var(--size-border);
   width: 100%;
+  transition: .3s;
   height: 100%;
+}
+.image_projeto img:hover{
+  transform: scale(1.2);
 }
 .links-projetos{
   display: flex;
