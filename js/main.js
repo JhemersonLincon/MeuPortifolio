@@ -168,3 +168,30 @@ btnStartGame.onclick = (e)=>{
     body.style.overflow = "hidden"
   }   
 }
+
+//PROJETOS 
+
+const collapsible = document.querySelectorAll('.collapsible');
+collapsible.forEach((element)=>{
+  element.addEventListener('click',function(){
+    
+    if(this.classList.contains("active")){
+      this.classList.remove('active')
+      const content = this.nextElementSibling;
+      content.classList.remove("active");
+    }
+    
+    else{
+      clearCollaps();
+      this.classList.toggle('active')
+      const content = this.nextElementSibling;
+      content.classList.toggle("active");
+    }
+  })
+})
+function clearCollaps(){
+  for(let i = 0;i < collapsible.length; i++){
+    collapsible[i].classList.remove('active')
+    collapsible[i].nextElementSibling.classList.remove('active')
+  }
+}
